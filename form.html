@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized T-Shirt Order Form</title>
+</head>
+<body>
+
+    <h1>Order Your Customized T-Shirt</h1>
+
+    <form action="/submit-order" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Custom T-Shirt Order</legend>
+
+            <!-- Tagline on the Shirt -->
+            <label for="tagline">Tagline on the Shirt:</label>
+            <input type="text" id="tagline" name="tagline" placeholder="Enter your tagline here" required><br><br>
+
+            <!-- Color -->
+            <label for="color">Color:</label>
+            <select id="color" name="color" required>
+                <option value="" disabled selected>Select a color</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="black">Black</option>
+                <option value="white">White</option>
+            </select><br><br>
+
+            <!-- Size -->
+            <label for="size">Size:</label>
+            <select id="size" name="size" required>
+                <option value="" disabled selected>Select a size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="x-large">X-Large</option>
+            </select><br><br>
+
+            <!-- Material -->
+            <label for="material">Material:</label>
+            <select id="material" name="material" required>
+                <option value="" disabled selected>Select material</option>
+                <option value="cotton">Cotton</option>
+                <option value="polyester">Polyester</option>
+                <option value="blend">Cotton-Polyester Blend</option>
+            </select><br><br>
+
+            <!-- Quantity -->
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required><br><br>
+
+            <!-- Delivery Date -->
+            <label for="delivery-date">Delivery Date:</label>
+            <input type="date" id="delivery-date" name="delivery-date" required><br><br>
+
+            <!-- Upload Design -->
+            <label for="design">Upload Your Design (Optional):</label>
+            <input type="file" id="design" name="design" accept=".jpg,.jpeg,.png,.pdf"><br><br>
+
+            <!-- Delivery Details -->
+            <fieldset>
+                <legend>Delivery Details</legend>
+
+                <label for="recipient-name">Recipient's Name:</label>
+                <input type="text" id="recipient-name" name="recipient-name" placeholder="Full name" required><br><br>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Street address" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required><br><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+            </fieldset>
+
+            <!-- Additional Comments -->
+            <label for="comments">Additional Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Any additional comments or special instructions"></textarea><br><br>
+
+            <!-- Custom Message -->
+            <label for="custom-message">Custom Message (Optional):</label>
+            <input type="text" id="custom-message" name="custom-message" placeholder="Add a custom message"><br><br>
+
+            <!-- Terms and Conditions -->
+            <label>
+                <input type="checkbox" id="terms" name="terms" required>
+                I agree to the <a href="/terms">terms and conditions</a>.
+            </label><br><br>
+
+            <!-- Submit and Reset Buttons -->
+            <button type="submit">Submit Order</button>
+            <button type="reset">Reset Form</button>
+        </fieldset>
+    </form>
+
+</body>
+</html>
